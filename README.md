@@ -10,6 +10,8 @@ For stateful startup and recovery, distinguish a live process, a reachable liste
 
 For agent tools and skills, compare declared read-only or idempotent hints with isolated actual calls, repeated effects, errors and what the model receives. Record conflicts and security mechanisms that were not tested.
 
+For recoverable agent tasks, check observable effects and model context when failures happen before and after tool execution and around result persistence. A model that does not repeat a call cannot establish idempotency or exactly-once execution.
+
 For multi-user or machine-authenticated workflows, check identity, tenant binding and permissions per entry point; management and chat APIs may differ. Use isolated accounts and mark source-only or untested cases clearly.
 
 When encoding, binary data or numeric precision matters, preserve the relevant input bytes and build configuration, and compare without erasing observable type or precision differences.
@@ -34,6 +36,8 @@ This repository is also a Markdown-only Recipkg skill recipe: validate with `rec
 验证有状态服务启动和恢复时，区分进程存活、监听可连接和数据加载完成后可服务请求。只对已观察的临时状态做有界等待；意外错误和超时仍是失败，正常重启不证明崩溃恢复。
 
 对 Agent 工具和技能，用隔离调用检查声明的只读、幂等属性与真实副作用、重复执行、错误及模型可见结果是否一致；记录冲突和未测试的安全机制。
+
+对可恢复的 Agent 任务，检查工具执行前后及结果持久化边界的失败、副作用和模型上下文；模型没有重复调用不能证明幂等或恰好执行一次。
 
 对多用户或机器身份工作流，分别检查各入口的身份、租户绑定和权限；管理和聊天接口可能不同。使用隔离账户，明确标记仅有源码证据或尚未测试的情况。
 
