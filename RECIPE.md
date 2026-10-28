@@ -5,7 +5,7 @@ format = "recipkg/1"
 
 [package]
 name = "software-to-prompt"
-version = "0.1.0"
+version = "0.1.1"
 kind = "skill"
 description = "将已有软件、GitHub 仓库或可观察产品提炼成纯 Markdown 软件配方，记录行为、递归依赖和验收条件。用于软件到提示词、保存重建说明或迁移现有软件的需求。"
 entry = "SKILL.md"
