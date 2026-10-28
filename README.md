@@ -6,6 +6,8 @@ Read [SKILL.md](SKILL.md) for the workflow and linked resources. This is the can
 
 For stateful updates, observe the complete before-and-after state using isolated data, including relevant omitted or empty fields, permissions and persistence. Record the tested interface and leave untested cases unknown.
 
+For agent tools and skills, compare declared read-only or idempotent hints with isolated actual calls, repeated effects, errors and what the model receives. Record conflicts and security mechanisms that were not tested.
+
 For multi-user or machine-authenticated workflows, check identity, tenant binding and permissions per entry point; management and chat APIs may differ. Use isolated accounts and mark source-only or untested cases clearly.
 
 When encoding, binary data or numeric precision matters, preserve the relevant input bytes and build configuration, and compare without erasing observable type or precision differences.
@@ -26,6 +28,8 @@ This repository is also a Markdown-only Recipkg skill recipe: validate with `rec
 本仓库只维护 `software-to-prompt` 技能。不同项目应把此同一仓库作为固定提交的 Git 子模块引用，不复制技能正文。修改先回本仓库，再更新项目指针；注意保护本地改动。技能入口与说明见 [SKILL.md](SKILL.md)。
 
 对有状态更新，用隔离数据观察完整的更新前后状态，并按需检查省略或空字段、权限和持久化；记录实际测试的接口，未测的情况保持未知。
+
+对 Agent 工具和技能，用隔离调用检查声明的只读、幂等属性与真实副作用、重复执行、错误及模型可见结果是否一致；记录冲突和未测试的安全机制。
 
 对多用户或机器身份工作流，分别检查各入口的身份、租户绑定和权限；管理和聊天接口可能不同。使用隔离账户，明确标记仅有源码证据或尚未测试的情况。
 
