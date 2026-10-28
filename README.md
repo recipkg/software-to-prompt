@@ -8,6 +8,8 @@ For stateful updates, observe the complete before-and-after state using isolated
 
 For multi-user or machine-authenticated workflows, check identity, tenant binding and permissions per entry point; management and chat APIs may differ. Use isolated accounts and mark source-only or untested cases clearly.
 
+When encoding, binary data or numeric precision matters, preserve the relevant input bytes and build configuration, and compare without erasing observable type or precision differences.
+
 ## Use as a project submodule
 
 ```sh
@@ -26,3 +28,5 @@ This repository is also a Markdown-only Recipkg skill recipe: validate with `rec
 对有状态更新，用隔离数据观察完整的更新前后状态，并按需检查省略或空字段、权限和持久化；记录实际测试的接口，未测的情况保持未知。
 
 对多用户或机器身份工作流，分别检查各入口的身份、租户绑定和权限；管理和聊天接口可能不同。使用隔离账户，明确标记仅有源码证据或尚未测试的情况。
+
+涉及编码、二进制或数值精度时，保留相关输入字节和构建配置，比较时避免抹掉可观察的类型或精度差异。
