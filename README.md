@@ -4,6 +4,8 @@
 
 Read [SKILL.md](SKILL.md) for the workflow and linked resources. This is the canonical standalone skill repository used by [Recipkg](https://github.com/recipkg/recipkg).
 
+For stateful updates, observe the complete before-and-after state using isolated data, including relevant omitted or empty fields, permissions and persistence. Record the tested interface and leave untested cases unknown.
+
 ## Use as a project submodule
 
 ```sh
@@ -18,3 +20,5 @@ This repository is also a Markdown-only Recipkg skill recipe: validate with `rec
 ## 中文
 
 本仓库只维护 `software-to-prompt` 技能。不同项目应把此同一仓库作为固定提交的 Git 子模块引用，不复制技能正文。修改先回本仓库，再更新项目指针；注意保护本地改动。技能入口与说明见 [SKILL.md](SKILL.md)。
+
+对有状态更新，用隔离数据观察完整的更新前后状态，并按需检查省略或空字段、权限和持久化；记录实际测试的接口，未测的情况保持未知。
