@@ -12,6 +12,8 @@ For agent tools and skills, compare declared read-only or idempotent hints with 
 
 For recoverable agent tasks, check observable effects and model context when failures happen before and after tool execution and around result persistence. A model that does not repeat a call cannot establish idempotency or exactly-once execution.
 
+For failures across a UI, server, and persisted events, compare each observed surface and the state after recovery. Use synthetic error markers and record access conditions; a marker in a response does not prove a real credential leak or a complete security audit.
+
 For multi-user or machine-authenticated workflows, check identity, tenant binding and permissions per entry point; management and chat APIs may differ. Use isolated accounts and mark source-only or untested cases clearly.
 
 When encoding, binary data or numeric precision matters, preserve the relevant input bytes and build configuration, and compare without erasing observable type or precision differences.
@@ -38,6 +40,8 @@ This repository is also a Markdown-only Recipkg skill recipe: validate with `rec
 对 Agent 工具和技能，用隔离调用检查声明的只读、幂等属性与真实副作用、重复执行、错误及模型可见结果是否一致；记录冲突和未测试的安全机制。
 
 对可恢复的 Agent 任务，检查工具执行前后及结果持久化边界的失败、副作用和模型上下文；模型没有重复调用不能证明幂等或恰好执行一次。
+
+当失败跨越界面、服务端和持久事件时，分别对照各入口及恢复后的状态。使用模拟错误标记并记录访问条件；响应包含标记不代表真实凭据泄露，也不代表完成了安全审计。
 
 对多用户或机器身份工作流，分别检查各入口的身份、租户绑定和权限；管理和聊天接口可能不同。使用隔离账户，明确标记仅有源码证据或尚未测试的情况。
 
